@@ -1,12 +1,25 @@
 import { Injectable } from '@nestjs/common';
+import { project_type, projects_type } from './projects-data.js';
+
+
 
 @Injectable()
 export class ProjectsService {
-  getProjects(): string {
-    return 'Projects';
+  private projects: projects_type;
+
+  constructor() {
+    this.projects = require('./projects-data.js');
   }
 
-  getProjectById(id: number): string {
-    return `Project ${id}`;
+  getProjects(): projects_type {
+    return this.projects;
+  }
+
+  getProjectById(id: number): project_type | null {
+    const project = this.projects.find((project) => project.id === id);
+    if (!project) {
+      return null;
+    }
+    return project;
   }
 }

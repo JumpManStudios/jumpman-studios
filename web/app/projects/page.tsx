@@ -1,4 +1,4 @@
-import Project from "@/components/projects/project";
+import Project from "@/components/projects/github-project-card";
 
 export default function ProjectsPage() {
   return (
