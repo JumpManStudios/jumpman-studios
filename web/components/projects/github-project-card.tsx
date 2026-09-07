@@ -1,4 +1,4 @@
-import { GithubProject } from '@shared/types/github-project';
+import type { GithubProject } from '@shared/types/github-project';
 
 export default function GithubProjectCard(githubProject: GithubProject) {
     const technologiesList = () => {

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { GithubProject } from '@shared/types/github-project.js';
+import type { GithubProject } from '@shared/types/github-project.js';
 
 
 

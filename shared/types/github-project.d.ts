@@ -5,4 +5,4 @@ export type GithubProject = {
     url: string;
     technologies: string[];
     status: string;
-};
+}
