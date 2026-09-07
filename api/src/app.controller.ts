@@ -1,13 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service.js';
-import { ProjectsService } from './projects/projects.service.js';
-import * as projectsData from './projects/projects-data.js';
+import { GithubProjectsService } from './github-projects/github-projects.service.js';
+import { GithubProject } from '@shared/types/github-project.js';
 
 @Controller()
 export class AppController {
   constructor(
     private readonly appService: AppService,
-    private readonly projectsService: ProjectsService,
+    private readonly projectsService: GithubProjectsService,
   ) {}
 
   @Get()
@@ -16,7 +16,7 @@ export class AppController {
   }
 
   @Get('projects')
-  getProjects(): projectsData.projects_type {
-    return this.projectsService.getProjects();
+  getGithubProjects(): GithubProject[] {
+    return this.projectsService.getGithubProjects();
   }
 }
