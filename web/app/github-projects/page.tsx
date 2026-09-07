@@ -6,7 +6,7 @@ export default async function ProjectsPage() {
   const githubProjects: GithubProject[] = await response.json();
   const projectList = [];
   for(let i = 0; i < githubProjects.length; i++ ){
-    projectList.push(<li><Link href={'projects/' + githubProjects[i].name}>{githubProjects[i].name}</Link></li>);
+    projectList.push(<li><Link href={'github-projects/' + githubProjects[i].name}>{githubProjects[i].name}</Link></li>);
   }
 
   return (
