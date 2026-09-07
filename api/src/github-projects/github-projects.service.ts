@@ -15,6 +15,15 @@ export class GithubProjectsService {
     return this.githubProjects;
   }
 
+  getGithubProjectByName(name: string): GithubProject | null {
+    const project = this.githubProjects.find((project) => project.name === name);
+    if (!project) {
+      return null;
+    }
+    console.log('found it');
+    return project;
+  }
+
   getGithubProjectById(id: number): GithubProject | null {
     const project = this.githubProjects.find((project) => project.id === id);
     if (!project) {

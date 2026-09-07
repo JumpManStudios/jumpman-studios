@@ -1,3 +1,5 @@
-export default function GithubProjectDetailsPage() {
-    return <h1>Github Project</h1>
+import {GithubProject} from "@shared/types/github-project";
+
+export default function GithubProjectDetailsPage(githubProject: GithubProject) {
+    return <h1>{githubProject.name}</h1>
 }

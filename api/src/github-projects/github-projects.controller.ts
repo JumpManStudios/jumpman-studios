@@ -9,4 +9,9 @@ export class GithubProjectsController {
   getGithubProjects() {
     return this.githubProjectsService.getGithubProjects();
   }
+
+  @Get('/:name')
+  getGithubProjectsByName(name: string) {
+    return this.githubProjectsService.getGithubProjectByName(name);
+  }
 }
