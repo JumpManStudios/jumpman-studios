@@ -6,7 +6,6 @@ import { GithubProjectsService } from './github-projects/github-projects.service
 export class AppController {
   constructor(
     private readonly appService: AppService,
-    private readonly projectsService: GithubProjectsService,
   ) {}
 
   @Get()
